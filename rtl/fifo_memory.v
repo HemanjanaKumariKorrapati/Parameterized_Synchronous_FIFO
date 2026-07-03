@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module fifo_memory #(
     parameter DATA_WIDTH = 8,
     parameter DEPTH = 16,

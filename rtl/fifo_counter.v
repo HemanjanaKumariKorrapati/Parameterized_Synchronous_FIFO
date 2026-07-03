@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module fifo_counter #(
     parameter DEPTH = 16,
     parameter ADDR_WIDTH = 4

@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module write_control(
     input  wr_en,
     input  full,

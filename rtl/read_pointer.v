@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module read_pointer #(
     parameter ADDR_WIDTH = 4,
     parameter DEPTH = 16

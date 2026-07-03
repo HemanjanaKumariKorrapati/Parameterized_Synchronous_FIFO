@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module read_control(
     input  rd_en,
     input  empty,

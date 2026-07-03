@@ -2,27 +2,27 @@
 
 (* dynports =  1  *)
 (* hdlname = "fifo_memory" *)
-(* src = "rtl/fifo_memory.v:1.1-32.10" *)
+(* src = "rtl/fifo_memory.v:2.1-33.10" *)
 module \$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (clk, wr_en, rd_en, wr_data, wr_ptr, rd_ptr, rd_data);
-  (* src = "rtl/fifo_memory.v:6.37-6.40" *)
+  (* src = "rtl/fifo_memory.v:7.37-7.40" *)
   input clk;
   wire clk;
-  (* src = "rtl/fifo_memory.v:7.37-7.42" *)
+  (* src = "rtl/fifo_memory.v:8.37-8.42" *)
   input wr_en;
   wire wr_en;
-  (* src = "rtl/fifo_memory.v:8.37-8.42" *)
+  (* src = "rtl/fifo_memory.v:9.37-9.42" *)
   input rd_en;
   wire rd_en;
-  (* src = "rtl/fifo_memory.v:10.37-10.44" *)
+  (* src = "rtl/fifo_memory.v:11.37-11.44" *)
   input [7:0] wr_data;
   wire [7:0] wr_data;
-  (* src = "rtl/fifo_memory.v:12.37-12.43" *)
+  (* src = "rtl/fifo_memory.v:13.37-13.43" *)
   input [3:0] wr_ptr;
   wire [3:0] wr_ptr;
-  (* src = "rtl/fifo_memory.v:13.37-13.43" *)
+  (* src = "rtl/fifo_memory.v:14.37-14.43" *)
   input [3:0] rd_ptr;
   wire [3:0] rd_ptr;
-  (* src = "rtl/fifo_memory.v:15.37-15.44" *)
+  (* src = "rtl/fifo_memory.v:16.37-16.44" *)
   output [7:0] rd_data;
   reg [7:0] rd_data;
   wire [7:0] _000_;
@@ -706,24 +706,24 @@ endmodule
 
 (* dynports =  1  *)
 (* hdlname = "read_pointer" *)
-(* src = "rtl/read_pointer.v:1.1-28.10" *)
+(* src = "rtl/read_pointer.v:2.1-29.10" *)
 module \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer (clk, rst, rd_en, empty, rd_ptr);
-  (* src = "rtl/read_pointer.v:5.33-5.36" *)
+  (* src = "rtl/read_pointer.v:6.33-6.36" *)
   input clk;
   wire clk;
-  (* src = "rtl/read_pointer.v:6.33-6.36" *)
+  (* src = "rtl/read_pointer.v:7.33-7.36" *)
   input rst;
   wire rst;
-  (* src = "rtl/read_pointer.v:7.33-7.38" *)
+  (* src = "rtl/read_pointer.v:8.33-8.38" *)
   input rd_en;
   wire rd_en;
-  (* src = "rtl/read_pointer.v:8.33-8.38" *)
+  (* src = "rtl/read_pointer.v:9.33-9.38" *)
   input empty;
   wire empty;
-  (* src = "rtl/read_pointer.v:10.33-10.39" *)
+  (* src = "rtl/read_pointer.v:11.33-11.39" *)
   output [3:0] rd_ptr;
   reg [3:0] rd_ptr;
-  (* src = "rtl/read_pointer.v:19.14-19.29" *)
+  (* src = "rtl/read_pointer.v:20.14-20.29" *)
   wire _00_;
   wire _01_;
   wire _02_;
@@ -738,19 +738,19 @@ module \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer (clk, rst
   assign _05_ = rd_ptr[2] ^ _01_;
   assign _06_ = ~(rd_ptr[3] ^ _02_);
   assign _00_ = rd_en & ~(empty);
-  (* src = "rtl/read_pointer.v:15.1-26.4" *)
+  (* src = "rtl/read_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) rd_ptr[0] <= 1'h0;
     else if (_00_) rd_ptr[0] <= _03_;
-  (* src = "rtl/read_pointer.v:15.1-26.4" *)
+  (* src = "rtl/read_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) rd_ptr[1] <= 1'h0;
     else if (_00_) rd_ptr[1] <= _04_;
-  (* src = "rtl/read_pointer.v:15.1-26.4" *)
+  (* src = "rtl/read_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) rd_ptr[2] <= 1'h0;
     else if (_00_) rd_ptr[2] <= _05_;
-  (* src = "rtl/read_pointer.v:15.1-26.4" *)
+  (* src = "rtl/read_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) rd_ptr[3] <= 1'h0;
     else if (_00_) rd_ptr[3] <= _06_;
@@ -758,24 +758,24 @@ endmodule
 
 (* dynports =  1  *)
 (* hdlname = "write_pointer" *)
-(* src = "rtl/write_pointer.v:1.1-28.10" *)
+(* src = "rtl/write_pointer.v:2.1-29.10" *)
 module \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer (clk, rst, wr_en, full, wr_ptr);
-  (* src = "rtl/write_pointer.v:5.33-5.36" *)
+  (* src = "rtl/write_pointer.v:6.33-6.36" *)
   input clk;
   wire clk;
-  (* src = "rtl/write_pointer.v:6.33-6.36" *)
+  (* src = "rtl/write_pointer.v:7.33-7.36" *)
   input rst;
   wire rst;
-  (* src = "rtl/write_pointer.v:7.33-7.38" *)
+  (* src = "rtl/write_pointer.v:8.33-8.38" *)
   input wr_en;
   wire wr_en;
-  (* src = "rtl/write_pointer.v:8.33-8.37" *)
+  (* src = "rtl/write_pointer.v:9.33-9.37" *)
   input full;
   wire full;
-  (* src = "rtl/write_pointer.v:10.33-10.39" *)
+  (* src = "rtl/write_pointer.v:11.33-11.39" *)
   output [3:0] wr_ptr;
   reg [3:0] wr_ptr;
-  (* src = "rtl/write_pointer.v:19.14-19.28" *)
+  (* src = "rtl/write_pointer.v:20.14-20.28" *)
   wire _00_;
   wire _01_;
   wire _02_;
@@ -790,19 +790,19 @@ module \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer (clk, rs
   assign _05_ = wr_ptr[2] ^ _01_;
   assign _06_ = ~(wr_ptr[3] ^ _02_);
   assign _00_ = wr_en & ~(full);
-  (* src = "rtl/write_pointer.v:15.1-26.4" *)
+  (* src = "rtl/write_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) wr_ptr[0] <= 1'h0;
     else if (_00_) wr_ptr[0] <= _03_;
-  (* src = "rtl/write_pointer.v:15.1-26.4" *)
+  (* src = "rtl/write_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) wr_ptr[1] <= 1'h0;
     else if (_00_) wr_ptr[1] <= _04_;
-  (* src = "rtl/write_pointer.v:15.1-26.4" *)
+  (* src = "rtl/write_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) wr_ptr[2] <= 1'h0;
     else if (_00_) wr_ptr[2] <= _05_;
-  (* src = "rtl/write_pointer.v:15.1-26.4" *)
+  (* src = "rtl/write_pointer.v:16.1-27.4" *)
   always @(posedge clk, posedge rst)
     if (rst) wr_ptr[3] <= 1'h0;
     else if (_00_) wr_ptr[3] <= _06_;
@@ -810,27 +810,27 @@ endmodule
 
 (* dynports =  1  *)
 (* hdlname = "fifo_counter" *)
-(* src = "rtl/fifo_counter.v:1.1-40.10" *)
+(* src = "rtl/fifo_counter.v:2.1-41.10" *)
 module \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter (clk, rst, wr_en, rd_en, full, empty, count);
-  (* src = "rtl/fifo_counter.v:5.29-5.32" *)
+  (* src = "rtl/fifo_counter.v:6.29-6.32" *)
   input clk;
   wire clk;
-  (* src = "rtl/fifo_counter.v:6.29-6.32" *)
+  (* src = "rtl/fifo_counter.v:7.29-7.32" *)
   input rst;
   wire rst;
-  (* src = "rtl/fifo_counter.v:7.29-7.34" *)
+  (* src = "rtl/fifo_counter.v:8.29-8.34" *)
   input wr_en;
   wire wr_en;
-  (* src = "rtl/fifo_counter.v:8.29-8.34" *)
+  (* src = "rtl/fifo_counter.v:9.29-9.34" *)
   input rd_en;
   wire rd_en;
-  (* src = "rtl/fifo_counter.v:9.29-9.33" *)
+  (* src = "rtl/fifo_counter.v:10.29-10.33" *)
   input full;
   wire full;
-  (* src = "rtl/fifo_counter.v:10.29-10.34" *)
+  (* src = "rtl/fifo_counter.v:11.29-11.34" *)
   input empty;
   wire empty;
-  (* src = "rtl/fifo_counter.v:12.31-12.36" *)
+  (* src = "rtl/fifo_counter.v:13.31-13.36" *)
   output [4:0] count;
   reg [4:0] count;
   wire _00_;
@@ -850,7 +850,7 @@ module \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter (clk, rst
   wire _14_;
   wire _15_;
   (* force_downto = 32'd1 *)
-  (* src = "rtl/fifo_counter.v:28.26-28.35|C:\\Users\\Hema\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/techmap.v:270.26-270.27" *)
+  (* src = "rtl/fifo_counter.v:29.26-29.35|C:\\Users\\Hema\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/techmap.v:270.26-270.27" *)
   wire [4:0] _16_;
   assign _16_[0] = ~count[0];
   assign _01_ = rd_en & ~(empty);
@@ -873,23 +873,23 @@ module \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter (clk, rst
   assign _16_[2] = _09_ ^ _10_;
   assign _16_[1] = ~(_16_[0] ^ _07_);
   assign _00_ = ~(_01_ ^ _02_);
-  (* src = "rtl/fifo_counter.v:15.1-38.4" *)
+  (* src = "rtl/fifo_counter.v:16.1-39.4" *)
   always @(posedge clk, posedge rst)
     if (rst) count[0] <= 1'h0;
     else if (_00_) count[0] <= _16_[0];
-  (* src = "rtl/fifo_counter.v:15.1-38.4" *)
+  (* src = "rtl/fifo_counter.v:16.1-39.4" *)
   always @(posedge clk, posedge rst)
     if (rst) count[1] <= 1'h0;
     else if (_00_) count[1] <= _16_[1];
-  (* src = "rtl/fifo_counter.v:15.1-38.4" *)
+  (* src = "rtl/fifo_counter.v:16.1-39.4" *)
   always @(posedge clk, posedge rst)
     if (rst) count[2] <= 1'h0;
     else if (_00_) count[2] <= _16_[2];
-  (* src = "rtl/fifo_counter.v:15.1-38.4" *)
+  (* src = "rtl/fifo_counter.v:16.1-39.4" *)
   always @(posedge clk, posedge rst)
     if (rst) count[3] <= 1'h0;
     else if (_00_) count[3] <= _16_[3];
-  (* src = "rtl/fifo_counter.v:15.1-38.4" *)
+  (* src = "rtl/fifo_counter.v:16.1-39.4" *)
   always @(posedge clk, posedge rst)
     if (rst) count[4] <= 1'h0;
     else if (_00_) count[4] <= _16_[4];
@@ -897,12 +897,12 @@ endmodule
 
 (* dynports =  1  *)
 (* hdlname = "full_logic" *)
-(* src = "rtl/full_logic.v:1.1-12.10" *)
+(* src = "rtl/full_logic.v:2.1-13.10" *)
 module \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic (count, full);
-  (* src = "rtl/full_logic.v:5.27-5.32" *)
+  (* src = "rtl/full_logic.v:6.27-6.32" *)
   input [4:0] count;
   wire [4:0] count;
-  (* src = "rtl/full_logic.v:7.12-7.16" *)
+  (* src = "rtl/full_logic.v:8.12-8.16" *)
   output full;
   wire full;
   wire _0_;
@@ -916,12 +916,12 @@ endmodule
 
 (* dynports =  1  *)
 (* hdlname = "empty_logic" *)
-(* src = "rtl/empty_logic.v:1.1-11.10" *)
+(* src = "rtl/empty_logic.v:2.1-12.10" *)
 module \$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100 (count, empty);
-  (* src = "rtl/empty_logic.v:4.27-4.32" *)
+  (* src = "rtl/empty_logic.v:5.27-5.32" *)
   input [4:0] count;
   wire [4:0] count;
-  (* src = "rtl/empty_logic.v:6.12-6.17" *)
+  (* src = "rtl/empty_logic.v:7.12-7.17" *)
   output empty;
   wire empty;
   wire _0_;
@@ -935,48 +935,48 @@ endmodule
 
 (* dynports =  1  *)
 (* top =  1  *)
-(* src = "rtl/fifo_top.v:1.1-101.10" *)
+(* src = "rtl/fifo_top.v:2.1-102.10" *)
 module fifo_top(clk, rst, wr_en, rd_en, wr_data, rd_data, full, empty);
-  (* src = "rtl/fifo_top.v:6.33-6.36" *)
+  (* src = "rtl/fifo_top.v:7.33-7.36" *)
   input clk;
   wire clk;
-  (* src = "rtl/fifo_top.v:7.33-7.36" *)
+  (* src = "rtl/fifo_top.v:8.33-8.36" *)
   input rst;
   wire rst;
-  (* src = "rtl/fifo_top.v:8.33-8.38" *)
+  (* src = "rtl/fifo_top.v:9.33-9.38" *)
   input wr_en;
   wire wr_en;
-  (* src = "rtl/fifo_top.v:9.33-9.38" *)
+  (* src = "rtl/fifo_top.v:10.33-10.38" *)
   input rd_en;
   wire rd_en;
-  (* src = "rtl/fifo_top.v:10.33-10.40" *)
+  (* src = "rtl/fifo_top.v:11.33-11.40" *)
   input [7:0] wr_data;
   wire [7:0] wr_data;
-  (* src = "rtl/fifo_top.v:12.33-12.40" *)
+  (* src = "rtl/fifo_top.v:13.33-13.40" *)
   output [7:0] rd_data;
   wire [7:0] rd_data;
-  (* src = "rtl/fifo_top.v:13.33-13.37" *)
+  (* src = "rtl/fifo_top.v:14.33-14.37" *)
   output full;
   wire full;
-  (* src = "rtl/fifo_top.v:14.33-14.38" *)
+  (* src = "rtl/fifo_top.v:15.33-15.38" *)
   output empty;
   wire empty;
-  (* src = "rtl/fifo_top.v:20.21-20.26" *)
+  (* src = "rtl/fifo_top.v:21.21-21.26" *)
   wire [4:0] count;
-  (* src = "rtl/fifo_top.v:18.23-18.29" *)
+  (* src = "rtl/fifo_top.v:19.23-19.29" *)
   wire [3:0] rd_ptr;
-  (* src = "rtl/fifo_top.v:23.6-23.17" *)
+  (* src = "rtl/fifo_top.v:24.6-24.17" *)
   wire read_enable;
-  (* src = "rtl/fifo_top.v:17.23-17.29" *)
+  (* src = "rtl/fifo_top.v:18.23-18.29" *)
   wire [3:0] wr_ptr;
-  (* src = "rtl/fifo_top.v:22.6-22.18" *)
+  (* src = "rtl/fifo_top.v:23.6-23.18" *)
   wire write_enable;
-  (* src = "rtl/fifo_top.v:96.3-99.2" *)
+  (* src = "rtl/fifo_top.v:97.3-100.2" *)
   \$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100  u_empty_logic (
     .count(count),
     .empty(empty)
   );
-  (* src = "rtl/fifo_top.v:64.3-72.2" *)
+  (* src = "rtl/fifo_top.v:65.3-73.2" *)
   \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter  u_fifo_counter (
     .clk(clk),
     .count(count),
@@ -986,7 +986,7 @@ module fifo_top(clk, rst, wr_en, rd_en, wr_data, rd_data, full, empty);
     .rst(rst),
     .wr_en(wr_en)
   );
-  (* src = "rtl/fifo_top.v:29.3-37.2" *)
+  (* src = "rtl/fifo_top.v:30.3-38.2" *)
   \$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory  u_fifo_memory (
     .clk(clk),
     .rd_data(rd_data),
@@ -996,19 +996,19 @@ module fifo_top(clk, rst, wr_en, rd_en, wr_data, rd_data, full, empty);
     .wr_en(write_enable),
     .wr_ptr(wr_ptr)
   );
-  (* src = "rtl/fifo_top.v:89.3-92.2" *)
+  (* src = "rtl/fifo_top.v:90.3-93.2" *)
   \$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic  u_full_logic (
     .count(count),
     .full(full)
   );
   (* module_not_derived = 32'd1 *)
-  (* src = "rtl/fifo_top.v:80.14-84.2" *)
+  (* src = "rtl/fifo_top.v:81.14-85.2" *)
   read_control u_read_control (
     .empty(empty),
     .rd_en(rd_en),
     .read_enable(read_enable)
   );
-  (* src = "rtl/fifo_top.v:53.3-59.2" *)
+  (* src = "rtl/fifo_top.v:54.3-60.2" *)
   \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer  u_read_pointer (
     .clk(clk),
     .empty(empty),
@@ -1017,13 +1017,13 @@ module fifo_top(clk, rst, wr_en, rd_en, wr_data, rd_data, full, empty);
     .rst(rst)
   );
   (* module_not_derived = 32'd1 *)
-  (* src = "rtl/fifo_top.v:74.15-78.2" *)
+  (* src = "rtl/fifo_top.v:75.15-79.2" *)
   write_control u_write_control (
     .full(full),
     .wr_en(wr_en),
     .write_enable(write_enable)
   );
-  (* src = "rtl/fifo_top.v:42.3-48.2" *)
+  (* src = "rtl/fifo_top.v:43.3-49.2" *)
   \$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer  u_write_pointer (
     .clk(clk),
     .full(full),
@@ -1033,29 +1033,29 @@ module fifo_top(clk, rst, wr_en, rd_en, wr_data, rd_data, full, empty);
   );
 endmodule
 
-(* src = "rtl/read_control.v:1.1-10.10" *)
+(* src = "rtl/read_control.v:2.1-11.10" *)
 module read_control(rd_en, empty, read_enable);
-  (* src = "rtl/read_control.v:2.12-2.17" *)
+  (* src = "rtl/read_control.v:3.12-3.17" *)
   input rd_en;
   wire rd_en;
-  (* src = "rtl/read_control.v:3.12-3.17" *)
+  (* src = "rtl/read_control.v:4.12-4.17" *)
   input empty;
   wire empty;
-  (* src = "rtl/read_control.v:5.12-5.23" *)
+  (* src = "rtl/read_control.v:6.12-6.23" *)
   output read_enable;
   wire read_enable;
   assign read_enable = rd_en & ~(empty);
 endmodule
 
-(* src = "rtl/write_control.v:1.1-10.10" *)
+(* src = "rtl/write_control.v:2.1-11.10" *)
 module write_control(wr_en, full, write_enable);
-  (* src = "rtl/write_control.v:2.12-2.17" *)
+  (* src = "rtl/write_control.v:3.12-3.17" *)
   input wr_en;
   wire wr_en;
-  (* src = "rtl/write_control.v:3.12-3.16" *)
+  (* src = "rtl/write_control.v:4.12-4.16" *)
   input full;
   wire full;
-  (* src = "rtl/write_control.v:5.12-5.24" *)
+  (* src = "rtl/write_control.v:6.12-6.24" *)
   output write_enable;
   wire write_enable;
   assign write_enable = wr_en & ~(full);

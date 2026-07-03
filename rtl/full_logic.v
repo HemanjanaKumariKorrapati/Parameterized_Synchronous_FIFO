@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module full_logic #(
     parameter DEPTH = 16,
     parameter ADDR_WIDTH = 4

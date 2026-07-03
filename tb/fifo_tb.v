@@ -98,6 +98,8 @@ integer pass_count;
 integer fail_count;
 integer i;
 
+reg [7:0] rand_data;
+integer rand_temp;
 reg [DATA_WIDTH-1:0] expected_data;
 
 //------------------------------
@@ -196,7 +198,11 @@ read_fifo();
 // DT09 : FIFO Full Condition
 //----------------------------------------------------------
 repeat (DEPTH)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 #20;
 
@@ -226,16 +232,28 @@ read_fifo();
 // DT13 : Pointer Wrap-around & Mixed Operations
 //----------------------------------------------------------
 repeat(DEPTH+2)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 repeat(DEPTH/2)
+begin
     read_fifo();
+end
 
 repeat(DEPTH/2)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 repeat(DEPTH+2)
+begin
     read_fifo();
+end   
 
 // Simultaneous Read & Write
 @(posedge clk);
@@ -296,13 +314,23 @@ rst = 0;
 $display("CT02 : Fill -> Empty -> Fill Again");
 
 repeat(DEPTH)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 repeat(DEPTH)
+begin
     read_fifo();
+end
 
 repeat(DEPTH)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 #20;
 
@@ -317,7 +345,9 @@ begin
     @(posedge clk);
     wr_en   = 1;
     rd_en   = 1;
-    wr_data = $random;
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    wr_data = rand_data;
 end
 
 @(posedge clk);
@@ -334,11 +364,17 @@ rd_en = 0;
 $display("CT04 : Full -> Not Full -> Full");
 
 repeat(DEPTH)
-    write_fifo($random);
+begin
+    rand_temp = $urandom_range(255,0);
+    rand_data = rand_temp[7:0];
+    write_fifo(rand_data);
+end
 
 read_fifo();
 
-write_fifo($random);
+rand_temp = $urandom_range(255,0);
+rand_data = rand_temp[7:0];
+write_fifo(rand_data);
 
 #20;
 
@@ -362,10 +398,16 @@ $display("CT06 : Long Stress Operation");
 
 repeat(50)
 begin
-    if($random % 2)
-        write_fifo($random);
+    if (($random % 2) != 0)
+    begin
+        rand_temp = $urandom_range(255,0);
+        rand_data = rand_temp[7:0];
+        write_fifo(rand_data);
+    end
     else
+    begin
         read_fifo();
+    end
 end
 
 #20;
@@ -394,7 +436,9 @@ begin
         // Random Write
         0:
         begin
-            write_fifo($random);
+            rand_temp = $urandom_range(255,0);
+            rand_data = rand_temp[7:0];
+            write_fifo(rand_data);
         end
 
         // Random Read
@@ -411,7 +455,9 @@ begin
             if(!full)
             begin
                 wr_en   = 1;
-                wr_data = $random;
+                rand_temp = $urandom_range(255,0);
+                rand_data = rand_temp[7:0];
+                wr_data = rand_data;
             end
 
             if(!empty)

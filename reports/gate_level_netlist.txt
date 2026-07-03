@@ -1,8 +1,3 @@
-Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
-Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
-Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
-Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
-Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
 Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
 Removed a total of 0 cells.
 
@@ -991,6 +986,6 @@ Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter to
 Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic to page 8.
 Dumping module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100 to page 9.
 
-End of script. Logfile hash: 8bf9bca71c
+End of script. Logfile hash: 1f9f81fdb1
 Yosys 0.66+154 (git sha1 23aadd92a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)
 Time spent: 2% 23x opt_expr (0 sec), 2% 19x opt_clean (0 sec), ...

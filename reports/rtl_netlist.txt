@@ -1,3 +1,7 @@
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
   Creating internal representation of mux trees.
   No muxes found in this module.
 Removed 0 multiplexer ports.
@@ -999,6 +1003,6 @@ Dumping module `\fifo_top'.
 Dumping module `\read_control'.
 Dumping module `\write_control'.
 
-End of script. Logfile hash: d7a38c32ba
+End of script. Logfile hash: e686e2fe60
 Yosys 0.66+154 (git sha1 23aadd92a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)
 Time spent: 1% 23x opt_expr (0 sec), 1% 19x opt_clean (0 sec), ...

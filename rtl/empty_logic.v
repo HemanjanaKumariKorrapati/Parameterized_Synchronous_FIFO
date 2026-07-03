@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module empty_logic #(
     parameter ADDR_WIDTH = 4
 )(
