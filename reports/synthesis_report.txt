@@ -1,0 +1,503 @@
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.66+154 (git sha1 23aadd92a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)
+
+-- Running command `read_verilog rtl/fifo_memory.v rtl/write_pointer.v rtl/read_pointer.v rtl/fifo_counter.v rtl/write_control.v rtl/read_control.v rtl/full_logic.v rtl/empty_logic.v rtl/fifo_top.v; hierarchy -check -top fifo_top; proc; opt; show -format dot -prefix schematics/fifo_rtl' --
+
+1. Executing Verilog-2005 frontend: rtl/fifo_memory.v
+Parsing Verilog input from `rtl/fifo_memory.v' to AST representation.
+Generating RTLIL representation for module `\fifo_memory'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/write_pointer.v
+Parsing Verilog input from `rtl/write_pointer.v' to AST representation.
+Generating RTLIL representation for module `\write_pointer'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/read_pointer.v
+Parsing Verilog input from `rtl/read_pointer.v' to AST representation.
+Generating RTLIL representation for module `\read_pointer'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/fifo_counter.v
+Parsing Verilog input from `rtl/fifo_counter.v' to AST representation.
+Generating RTLIL representation for module `\fifo_counter'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/write_control.v
+Parsing Verilog input from `rtl/write_control.v' to AST representation.
+Generating RTLIL representation for module `\write_control'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/read_control.v
+Parsing Verilog input from `rtl/read_control.v' to AST representation.
+Generating RTLIL representation for module `\read_control'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/full_logic.v
+Parsing Verilog input from `rtl/full_logic.v' to AST representation.
+Generating RTLIL representation for module `\full_logic'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: rtl/empty_logic.v
+Parsing Verilog input from `rtl/empty_logic.v' to AST representation.
+Generating RTLIL representation for module `\empty_logic'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: rtl/fifo_top.v
+Parsing Verilog input from `rtl/fifo_top.v' to AST representation.
+Generating RTLIL representation for module `\fifo_top'.
+Successfully finished Verilog frontend.
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+10.1. Analyzing design hierarchy..
+Top module:  \fifo_top
+Used module:     \empty_logic
+Used module:     \full_logic
+Used module:     \read_control
+Used module:     \write_control
+Used module:     \fifo_counter
+Used module:     \read_pointer
+Used module:     \write_pointer
+Used module:     \fifo_memory
+Parameter \ADDR_WIDTH = 4
+
+10.2. Executing AST frontend in derive mode using pre-parsed AST for module `\empty_logic'.
+Parameter \ADDR_WIDTH = 4
+Generating RTLIL representation for module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+
+10.3. Executing AST frontend in derive mode using pre-parsed AST for module `\full_logic'.
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+Generating RTLIL representation for module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+
+10.4. Executing AST frontend in derive mode using pre-parsed AST for module `\fifo_counter'.
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+Generating RTLIL representation for module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Parameter \ADDR_WIDTH = 4
+Parameter \DEPTH = 16
+
+10.5. Executing AST frontend in derive mode using pre-parsed AST for module `\read_pointer'.
+Parameter \ADDR_WIDTH = 4
+Parameter \DEPTH = 16
+Generating RTLIL representation for module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Parameter \ADDR_WIDTH = 4
+Parameter \DEPTH = 16
+
+10.6. Executing AST frontend in derive mode using pre-parsed AST for module `\write_pointer'.
+Parameter \ADDR_WIDTH = 4
+Parameter \DEPTH = 16
+Generating RTLIL representation for module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Parameter \DATA_WIDTH = 8
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+
+10.7. Executing AST frontend in derive mode using pre-parsed AST for module `\fifo_memory'.
+Parameter \DATA_WIDTH = 8
+Parameter \DEPTH = 16
+Parameter \ADDR_WIDTH = 4
+Generating RTLIL representation for module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+
+10.8. Analyzing design hierarchy..
+Top module:  \fifo_top
+Used module:     $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+Used module:     \read_control
+Used module:     \write_control
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+Used module:     $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+
+10.9. Analyzing design hierarchy..
+Top module:  \fifo_top
+Used module:     $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+Used module:     \read_control
+Used module:     \write_control
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+Used module:     $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+Removing unused module `\empty_logic'.
+Removing unused module `\full_logic'.
+Removing unused module `\fifo_counter'.
+Removing unused module `\read_pointer'.
+Removing unused module `\write_pointer'.
+Removing unused module `\fifo_memory'.
+Removed 6 unused modules.
+
+11. Executing PROC pass (convert processes to netlists).
+
+11.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_memory.v:20$54 in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Marked 2 switch rules as full_case in process $proc$rtl/write_pointer.v:15$48 in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Marked 2 switch rules as full_case in process $proc$rtl/read_pointer.v:15$43 in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Marked 2 switch rules as full_case in process $proc$rtl/fifo_counter.v:15$36 in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+Removed a total of 0 dead cases.
+
+11.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+11.4. Executing PROC_INIT pass (extract init attributes).
+
+11.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.$proc$rtl/write_pointer.v:15$48'.
+Found async reset \rst in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.$proc$rtl/read_pointer.v:15$43'.
+Found async reset \rst in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.$proc$rtl/fifo_counter.v:15$36'.
+
+11.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~7 debug messages>
+
+11.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:26$61'.
+     1/1: $0\rd_data[7:0]
+Creating decoders for process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+     1/3: $1$memwr$\mem$rtl/fifo_memory.v:23$53_EN[7:0]$60
+     2/3: $1$memwr$\mem$rtl/fifo_memory.v:23$53_DATA[7:0]$59
+     3/3: $1$memwr$\mem$rtl/fifo_memory.v:23$53_ADDR[3:0]$58
+Creating decoders for process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.$proc$rtl/write_pointer.v:15$48'.
+     1/1: $0\wr_ptr[3:0]
+Creating decoders for process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.$proc$rtl/read_pointer.v:15$43'.
+     1/1: $0\rd_ptr[3:0]
+Creating decoders for process `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.$proc$rtl/fifo_counter.v:15$36'.
+     1/1: $0\count[4:0]
+
+11.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+11.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.\rd_data' using process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:26$61'.
+  created $dff cell `$procdff$89' with positive edge clock.
+Creating register for signal `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$memwr$\mem$rtl/fifo_memory.v:23$53_ADDR' using process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+  created $dff cell `$procdff$90' with positive edge clock.
+Creating register for signal `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$memwr$\mem$rtl/fifo_memory.v:23$53_DATA' using process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+  created $dff cell `$procdff$91' with positive edge clock.
+Creating register for signal `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$memwr$\mem$rtl/fifo_memory.v:23$53_EN' using process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+  created $dff cell `$procdff$92' with positive edge clock.
+Creating register for signal `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.\wr_ptr' using process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.$proc$rtl/write_pointer.v:15$48'.
+  created $adff cell `$procdff$95' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.\rd_ptr' using process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.$proc$rtl/read_pointer.v:15$43'.
+  created $adff cell `$procdff$98' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.\count' using process `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.$proc$rtl/fifo_counter.v:15$36'.
+  created $adff cell `$procdff$101' with positive edge clock and positive level reset.
+
+11.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+11.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:26$61'.
+Removing empty process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:26$61'.
+Found and cleaned up 1 empty switch in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+Removing empty process `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.$proc$rtl/fifo_memory.v:20$54'.
+Found and cleaned up 2 empty switches in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.$proc$rtl/write_pointer.v:15$48'.
+Removing empty process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.$proc$rtl/write_pointer.v:15$48'.
+Found and cleaned up 2 empty switches in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.$proc$rtl/read_pointer.v:15$43'.
+Removing empty process `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.$proc$rtl/read_pointer.v:15$43'.
+Found and cleaned up 1 empty switch in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.$proc$rtl/fifo_counter.v:15$36'.
+Removing empty process `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.$proc$rtl/fifo_counter.v:15$36'.
+Cleaned up 7 empty switches.
+
+11.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+<suppressed ~1 debug messages>
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+<suppressed ~1 debug messages>
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 10 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 7 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 7 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 10 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \read_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \write_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+    Consolidated identical input bits for $mux cell $procmux$66:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$66_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$66_Y [0]
+      New connections: $procmux$66_Y [7:1] = { $procmux$66_Y [0] $procmux$66_Y [0] $procmux$66_Y [0] $procmux$66_Y [0] $procmux$66_Y [0] $procmux$66_Y [0] $procmux$66_Y [0] }
+  Optimizing cells in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+  Optimizing cells in module \read_control.
+  Optimizing cells in module \write_control.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+  Optimizing cells in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+Performed a total of 1 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 10 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 7 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 7 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 10 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$89 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = $memrd$\mem$rtl/fifo_memory.v:29$62_DATA, Q = \rd_data).
+Adding EN signal on $procdff$95 ($adff) from module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer (D = $procmux$75_Y, Q = \wr_ptr).
+Adding EN signal on $procdff$98 ($adff) from module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer (D = $procmux$80_Y, Q = \rd_ptr).
+Adding EN signal on $procdff$101 ($adff) from module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter (D = $procmux$86_Y, Q = \count).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+Removed 6 unused cells and 31 unused wires.
+<suppressed ~14 debug messages>
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \read_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \write_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+  Optimizing cells in module \read_control.
+  Optimizing cells in module \write_control.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+  Optimizing cells in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+Performed a total of 0 changes.
+
+12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 6 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 11 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+
+12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+12.16. Finished fast OPT passes. (There is nothing left to do.)
+
+13. Generating Graphviz representation of design.
+Writing dot description to `schematics/fifo_rtl.dot'.
+Dumping module fifo_top to page 1.
+Dumping module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory to page 2.
+Dumping module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer to page 3.
+Dumping module read_control to page 4.
+Dumping module write_control to page 5.
+Dumping module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer to page 6.
+Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter to page 7.
+Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic to page 8.
+Dumping module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100 to page 9.
+
+End of script. Logfile hash: 2f1b36dfb1
+Yosys 0.66+154 (git sha1 23aadd92a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)
+Time spent: 4% 10x read_verilog (0 sec), 4% 4x opt_expr (0 sec), ...

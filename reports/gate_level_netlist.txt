@@ -1,0 +1,996 @@
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+13.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $procmux$86 in front of them:
+        $auto$alumacc.cc:512:replace_alu$119
+        $auto$alumacc.cc:512:replace_alu$122
+
+13.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+Removed 0 unused cells and 42 unused wires.
+<suppressed ~2 debug messages>
+
+13.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+13.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \read_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \write_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~54 debug messages>
+
+13.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+  Optimizing cells in module \read_control.
+  Optimizing cells in module \write_control.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:244:merge_operators$342:
+      Old ports: A=5'11111, B=5'00001, Y=$auto$rtlil.cc:3399:Mux$343
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:3399:Mux$343 [1]
+      New connections: { $auto$rtlil.cc:3399:Mux$343 [4:2] $auto$rtlil.cc:3399:Mux$343 [0] } = { $auto$rtlil.cc:3399:Mux$343 [1] $auto$rtlil.cc:3399:Mux$343 [1] $auto$rtlil.cc:3399:Mux$343 [1] 1'1 }
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+  Optimizing cells in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+Performed a total of 1 changes.
+
+13.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 92 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 10 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+13.19.14. Executing OPT_SHARE pass.
+
+13.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\mem[0]$134 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[0]).
+Adding EN signal on $memory\mem[1]$136 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[1]).
+Adding EN signal on $memory\mem[2]$138 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[2]).
+Adding EN signal on $memory\mem[3]$140 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[3]).
+Adding EN signal on $memory\mem[4]$142 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[4]).
+Adding EN signal on $memory\mem[5]$144 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[5]).
+Adding EN signal on $memory\mem[6]$146 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[6]).
+Adding EN signal on $memory\mem[7]$148 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[7]).
+Adding EN signal on $memory\mem[8]$150 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[8]).
+Adding EN signal on $memory\mem[9]$152 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[9]).
+Adding EN signal on $memory\mem[10]$154 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[10]).
+Adding EN signal on $memory\mem[11]$156 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[11]).
+Adding EN signal on $memory\mem[12]$158 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[12]).
+Adding EN signal on $memory\mem[13]$160 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[13]).
+Adding EN signal on $memory\mem[14]$162 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[14]).
+Adding EN signal on $memory\mem[15]$164 ($dff) from module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory (D = \wr_data, Q = \mem[15]).
+
+13.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+Removed 16 unused cells and 18 unused wires.
+<suppressed ~18 debug messages>
+
+13.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+13.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fifo_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \read_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \write_control..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+13.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fifo_top.
+  Optimizing cells in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+  Optimizing cells in module \read_control.
+  Optimizing cells in module \write_control.
+  Optimizing cells in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+  Optimizing cells in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+  Optimizing cells in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+Performed a total of 0 changes.
+
+13.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 76 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 6 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 10 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 1 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 1 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+13.19.22. Executing OPT_SHARE pass.
+
+13.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+
+13.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+13.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+13.20. Executing TECHMAP pass (map to technology primitives).
+
+13.20.1. Executing Verilog-2005 frontend: C:\Users\Hema\DOWNLO~1\OSS-CA~1\bin\../share/yosys/techmap.v
+Parsing Verilog input from `C:\Users\Hema\DOWNLO~1\OSS-CA~1\bin\../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+13.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $dffe.
+No more expansions possible.
+<suppressed ~535 debug messages>
+
+13.21. Executing OPT pass (performing simple optimizations).
+
+13.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+<suppressed ~41 debug messages>
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+<suppressed ~41 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+<suppressed ~32 debug messages>
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+<suppressed ~5 debug messages>
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+13.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 300 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 30 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 25 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\read_control'.
+Computing hashes of 2 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 2 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 30 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 25 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 44 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 40 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 6 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 5 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 14 cells.
+
+13.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+Removed 9 unused cells and 151 unused wires.
+<suppressed ~13 debug messages>
+
+13.21.5. Finished fast OPT passes.
+
+13.22. Executing ABC pass (technology mapping using ABC).
+
+13.22.1. Extracting gate netlist of module `\fifo_top' to `<abc-temp-dir>/input.blif'..
+
+13.22.1.1. Executed ABC.
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+13.22.2. Extracting gate netlist of module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory' to `<abc-temp-dir>/input.blif'..
+
+13.22.2.1. Executed ABC.
+Extracted 164 gates and 301 wires to a netlist network with 137 inputs and 24 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       42
+ABC RESULTS:            ANDNOT cells:        9
+ABC RESULTS:               MUX cells:       94
+ABC RESULTS:              NAND cells:       30
+ABC RESULTS:               NOR cells:        7
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:             ORNOT cells:       12
+ABC RESULTS:        internal signals:      140
+ABC RESULTS:           input signals:      137
+ABC RESULTS:          output signals:       24
+Removing temp directory.
+
+13.22.3. Extracting gate netlist of module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer' to `<abc-temp-dir>/input.blif'..
+
+13.22.3.1. Executed ABC.
+Extracted 18 gates and 25 wires to a netlist network with 6 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       14
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+13.22.4. Extracting gate netlist of module `\read_control' to `<abc-temp-dir>/input.blif'..
+
+13.22.4.1. Executed ABC.
+Extracted 2 gates and 4 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.4.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+13.22.5. Extracting gate netlist of module `\write_control' to `<abc-temp-dir>/input.blif'..
+
+13.22.5.1. Executed ABC.
+Extracted 2 gates and 4 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.5.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+13.22.6. Extracting gate netlist of module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer' to `<abc-temp-dir>/input.blif'..
+
+13.22.6.1. Executed ABC.
+Extracted 18 gates and 25 wires to a netlist network with 6 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.6.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       14
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+13.22.7. Extracting gate netlist of module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter' to `<abc-temp-dir>/input.blif'..
+
+13.22.7.1. Executed ABC.
+Extracted 32 gates and 41 wires to a netlist network with 9 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.7.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:        5
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:        internal signals:       26
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+13.22.8. Extracting gate netlist of module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic' to `<abc-temp-dir>/input.blif'..
+
+13.22.8.1. Executed ABC.
+Extracted 6 gates and 11 wires to a netlist network with 5 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+13.22.9. Extracting gate netlist of module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100' to `<abc-temp-dir>/input.blif'..
+
+13.22.9.1. Executed ABC.
+Extracted 5 gates and 10 wires to a netlist network with 5 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+13.22.9.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:        internal signals:        4
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+13.23. Executing OPT pass (performing simple optimizations).
+
+13.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fifo_top.
+Optimizing module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer.
+Optimizing module read_control.
+Optimizing module write_control.
+Optimizing module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter.
+Optimizing module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic.
+Optimizing module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100.
+
+13.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fifo_top'.
+Computing hashes of 8 cells of `\fifo_top'.
+Finding duplicate cells in `\fifo_top'.
+Finding identical cells in module `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Computing hashes of 334 cells of `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding duplicate cells in `$paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Computing hashes of 11 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer'.
+Finding identical cells in module `\read_control'.
+Computing hashes of 1 cells of `\read_control'.
+Finding duplicate cells in `\read_control'.
+Finding identical cells in module `\write_control'.
+Computing hashes of 1 cells of `\write_control'.
+Finding duplicate cells in `\write_control'.
+Finding identical cells in module `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Computing hashes of 11 cells of `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding duplicate cells in `$paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Computing hashes of 26 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter'.
+Finding identical cells in module `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Computing hashes of 4 cells of `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding duplicate cells in `$paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic'.
+Finding identical cells in module `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Computing hashes of 4 cells of `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Finding duplicate cells in `$paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100'.
+Removed a total of 0 cells.
+
+13.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fifo_top..
+Finding unused cells or wires in module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer..
+Finding unused cells or wires in module \read_control..
+Finding unused cells or wires in module \write_control..
+Finding unused cells or wires in module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter..
+Finding unused cells or wires in module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic..
+Finding unused cells or wires in module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100..
+Removed 0 unused cells and 298 unused wires.
+<suppressed ~8 debug messages>
+
+13.23.5. Finished fast OPT passes.
+
+13.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `fifo_top'. Setting top module to fifo_top.
+
+13.24.1. Analyzing design hierarchy..
+Top module:  \fifo_top
+Used module:     $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+Used module:     \read_control
+Used module:     \write_control
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+Used module:     $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+
+13.24.2. Analyzing design hierarchy..
+Top module:  \fifo_top
+Used module:     $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+Used module:     \read_control
+Used module:     \write_control
+Used module:     $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+Used module:     $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+Used module:     $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+Removed 0 unused modules.
+
+13.25. Printing statistics.
+
+=== fifo_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+       37 wire bits
+       13 public wires
+       37 public wire bits
+        8 ports
+       22 port bits
+        8 submodules
+        1   $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+        1   $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+        1   $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+        1   $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+        1   $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+        1   $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+        1   read_control
+        1   write_control
+
+=== $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      214 wires
+      353 wire bits
+       23 public wires
+      155 public wire bits
+        7 ports
+       27 port bits
+      334 cells
+        9   $_ANDNOT_
+       42   $_AND_
+      136   $_DFFE_PP_
+       94   $_MUX_
+       30   $_NAND_
+        7   $_NOR_
+       12   $_ORNOT_
+        4   $_OR_
+
+=== $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       15 wire bits
+        5 public wires
+        8 public wire bits
+        5 ports
+        8 port bits
+       11 cells
+        1   $_ANDNOT_
+        1   $_AND_
+        4   $_DFFE_PP0P_
+        1   $_NAND_
+        1   $_NOT_
+        1   $_XNOR_
+        2   $_XOR_
+
+=== read_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        3 wire bits
+        3 public wires
+        3 public wire bits
+        3 ports
+        3 port bits
+        1 cells
+        1   $_ANDNOT_
+
+=== write_control ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        3 wire bits
+        3 public wires
+        3 public wire bits
+        3 ports
+        3 port bits
+        1 cells
+        1   $_ANDNOT_
+
+=== $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       15 wire bits
+        5 public wires
+        8 public wire bits
+        5 ports
+        8 port bits
+       11 cells
+        1   $_ANDNOT_
+        1   $_AND_
+        4   $_DFFE_PP0P_
+        1   $_NAND_
+        1   $_NOT_
+        1   $_XNOR_
+        2   $_XOR_
+
+=== $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+       32 wire bits
+        7 public wires
+       11 public wire bits
+        7 ports
+       11 port bits
+       26 cells
+        1   $_ANDNOT_
+        3   $_AND_
+        5   $_DFFE_PP0P_
+        1   $_MUX_
+        5   $_NAND_
+        1   $_NOT_
+        1   $_ORNOT_
+        1   $_OR_
+        5   $_XNOR_
+        3   $_XOR_
+
+=== $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        9 wire bits
+        2 public wires
+        6 public wire bits
+        2 ports
+        6 port bits
+        4 cells
+        2   $_AND_
+        2   $_NOR_
+
+=== $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        9 wire bits
+        2 public wires
+        6 public wire bits
+        2 ports
+        6 port bits
+        4 cells
+        1   $_ANDNOT_
+        1   $_AND_
+        2   $_NOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      392 fifo_top
+      334 $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+       11 $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+       11 $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+       26 $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+        4 $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+        4 $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+        1 read_control
+        1 write_control
+
+        +----------Count including submodules.
+        | 
+      291 wires
+      476 wire bits
+       63 public wires
+      237 public wire bits
+       42 ports
+       94 port bits
+        - memories
+        - memory bits
+        - processes
+      392 cells
+       15   $_ANDNOT_
+       50   $_AND_
+       13   $_DFFE_PP0P_
+      136   $_DFFE_PP_
+       95   $_MUX_
+       37   $_NAND_
+       11   $_NOR_
+        3   $_NOT_
+       13   $_ORNOT_
+        5   $_OR_
+        7   $_XNOR_
+        7   $_XOR_
+        8 submodules
+        1   $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory
+        1   $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer
+        1   $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer
+        1   $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter
+        1   $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic
+        1   $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100
+        1   read_control
+        1   write_control
+
+13.26. Executing CHECK pass (checking for obvious problems).
+Checking module fifo_top...
+Checking module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory...
+Checking module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer...
+Checking module read_control...
+Checking module write_control...
+Checking module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer...
+Checking module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter...
+Checking module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic...
+Checking module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100...
+Found and reported 0 problems.
+
+14. Generating Graphviz representation of design.
+Writing dot description to `schematics/fifo_gate_level.dot'.
+Dumping module fifo_top to page 1.
+Dumping module $paramod$6a1231bad6349c99ef10c6a6a58dbbf16b7d2bdb\fifo_memory to page 2.
+Dumping module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\write_pointer to page 3.
+Dumping module read_control to page 4.
+Dumping module write_control to page 5.
+Dumping module $paramod$d85c9bc1fa502815d8902630536652761c9275b3\read_pointer to page 6.
+Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\fifo_counter to page 7.
+Dumping module $paramod$e0708b37338bdb088a3b0307db2b5859402bc745\full_logic to page 8.
+Dumping module $paramod\empty_logic\ADDR_WIDTH=s32'00000000000000000000000000000100 to page 9.
+
+End of script. Logfile hash: 8bf9bca71c
+Yosys 0.66+154 (git sha1 23aadd92a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)
+Time spent: 2% 23x opt_expr (0 sec), 2% 19x opt_clean (0 sec), ...
