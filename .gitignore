@@ -26,3 +26,19 @@ Thumbs.db
 
 # Yosys temporary
 *.dot~
+
+# Simulation executable
+sim/*.exe
+
+# Waveforms
+waveforms/*.vcd
+
+# GTKWave save files
+*.vvp
+*.gtkw
+
+# Verilator build
+obj_dir/
+
+# Temporary files
+*.log
